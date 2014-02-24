@@ -16,7 +16,7 @@ This project is a fork of hilverd's [Oracle and Ubuntu setup](https://github.com
 * If you're behind a proxy:
 ** vagrant plugin install vagrant-proxyconf
 ** uncomment and fill in proxy configuration in `Vagrantfile`
-* Download [Oracle Database 11g Express Edition for Linux x64|http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html]. Place the file oracle-xe-11.2.0-1.0.x86_64.rpm.zip in the directory modules/oracle/files of this project. (Alternatively, you could keep the zip file in some other location and make a hard link to it from modules/oracle/files.)
+* Download [Oracle Database 11g Express Edition for Linux x64](http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html]. Place the file oracle-xe-11.2.0-1.0.x86_64.rpm.zip in the directory modules/oracle/files of this project. (Alternatively, you could keep the zip file in some other location and make a hard link to it from modules/oracle/files.)
 * Run `Vagrant up` form the checkout out location
 * Ssh onto the box!
 
