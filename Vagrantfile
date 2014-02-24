@@ -28,11 +28,11 @@ Vagrant.configure("2") do |config|
 
   config.vbguest.auto_update = false
 
-  # config.env_proxy.http = 
-  # config.env_proxy.https = 
-  # config.proxy.http     = 
-  # config.proxy.https    = 
-  # config.proxy.no_proxy = 
+  config.env_proxy.http = "http://surf-proxy.intranet.db.com:8080"
+  config.env_proxy.https = "http://surf-proxy.intranet.db.com:8080"
+  config.proxy.http     = "http://surf-proxy.intranet.db.com:8080"
+  config.proxy.https    = "http://surf-proxy.intranet.db.com:8080"
+  config.proxy.no_proxy = "localhost,127.0.0.1"
 
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "manifests"
