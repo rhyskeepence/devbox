@@ -22,9 +22,15 @@ This project is a fork of hilverd's [Oracle and Ubuntu setup](https://github.com
 
 ## What it ships with
 
+1. Ubuntu 13.10
 1. Oracle
-2. Java
+1. Java
+1. Chef 11.8.0
 
 ## Ssh 
 
 If you're using Putty, you might need to convert the `insecure_private_key` using `puttygen.exe`. By default the user is `vagrant`.
+
+## Shared folders
+
+The checkout location is automatically shared between the host and guest machines.
