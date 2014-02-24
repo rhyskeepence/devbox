@@ -1,4 +1,4 @@
-# Common Dev Environment
+# Devbox Environment
 
 Forced to run on Windows but hanker for *nix? Mingw32 and Cygwin not doing it for you? Use this handy standard dev environment and all your devs can bootstrap their desktop with a standard tool stack.
 
@@ -22,10 +22,8 @@ This project is a fork of hilverd's [Oracle and Ubuntu setup](https://github.com
 
 ## What it ships with
 
-1. Ubuntu 13.10
 1. Oracle
-1. Java
-1. Chef 11.8.0
+1. Java 7
 
 ## Ssh 
 
