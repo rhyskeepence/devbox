@@ -2,16 +2,15 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  # All Vagrant configuration is done here. The most common configuration
-  # options are documented and commented below. For a complete reference,
-  # please see the online documentation at vagrantup.com.
 
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.hostname = "oracle"
-
-  # Forward Oracle port
-  config.vm.network :forwarded_port, guest: 1521, host: 1521
+  
+  config.vm.network :forwarded_port, guest: 1521, host: 1521      # Oracle
+  config.vm.network :forwarded_port, guest: 80, host: 8080        # http
+  config.vm.network :forwarded_port, guest: 3000, host: 3000      # Specific http port for my app
+  config.vm.network :forwarded_port, guest: 8080, host: 8080      # Specific http port for my app
 
   # Provider-specific configuration so you can fine-tune various backing
   # providers for Vagrant. These expose provider-specific options.
@@ -29,11 +28,11 @@ Vagrant.configure("2") do |config|
 
   config.vbguest.auto_update = false
 
-# config.env_proxy.http =
-#  config.env_proxy.https = 
-#  config.proxy.http     = 
-#  config.proxy.https    = 
-#  config.proxy.no_proxy = 
+  # config.env_proxy.http = 
+  # config.env_proxy.https =
+  # config.proxy.http     = 
+  # config.proxy.https    = 
+  # config.proxy.no_proxy = 
 
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "manifests"
