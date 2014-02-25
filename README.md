@@ -20,14 +20,25 @@ This project is a fork of hilverd's [Oracle and Ubuntu setup](https://github.com
 * Run `Vagrant up` form the checkout out location
 * Ssh onto the box!
 
+
 ## What it ships with
 
 1. Oracle
 1. Java 7
+1. Maven
+1. Gits 
 
 ## Ssh 
 
-If you're using Putty, you might need to convert the `insecure_private_key` using `puttygen.exe`. By default the user is `vagrant`.
+By default the user is `vagrant`.
+
+If you're using Putty, you might need to convert the `insecure_private_key` using `puttygen.exe` to be able to login to the guest machine. 
+
+## Guest machine setup
+
+1. [Setup a ssh key](https://help.github.com/articles/generating-ssh-keys) on the guest machine. Upload this to your git server (Github or similar).
+1. Add your specific git config (ie, `git config --global user.name "Your Name"` and `git config --global user.email you@example.com`)
+
 
 ## Shared folders
 
