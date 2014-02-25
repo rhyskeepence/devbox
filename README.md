@@ -32,3 +32,13 @@ If you're using Putty, you might need to convert the `insecure_private_key` usin
 ## Shared folders
 
 The checkout location is automatically shared between the host and guest machines.
+
+
+## Guest VM
+
+### Some folders
+
+Under the checkout folder, the following folders are not added to git.
+
+ * `db` folder for Oracle XE's databases
+ * `dev` your dev folder, checkout project files here as this folder is shared with the host machine meaning you can run your IDE form your host environment and point it at here.
