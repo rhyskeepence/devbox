@@ -1,0 +1,1 @@
+Checkout your project files here, it'll be automatically shared with your host machine.

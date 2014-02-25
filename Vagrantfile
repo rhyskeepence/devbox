@@ -11,8 +11,6 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest: 80, host: 8080        # http
   config.vm.network :forwarded_port, guest: 3000, host: 3000      # Specific http port for my app
 
-  # config.vm.synced_folder "..", "/dev"
-
   config.vm.provider :virtualbox do |virtualbox|
     virtualbox.customize ["modifyvm", :id,
                   "--name", "devbox",
