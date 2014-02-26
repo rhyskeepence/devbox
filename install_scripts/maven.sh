@@ -2,6 +2,7 @@
 
 sudo apt-get -y install maven
 
+echo "export M2_HOME=/usr/share/maven" >> ~/.bashrc
 echo "export MVN_HOME=/usr/share/maven" >> ~/.bashrc
 
 if [ -n "${HTTP_PROXY}" ]; then
