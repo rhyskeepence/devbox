@@ -10,14 +10,11 @@ if [ -n "${HTTP_PROXY}" ]; then
   host=`echo $HTTP_PROXY | cut -d':' -f 2 |  sed -r 's/^.{2}//'`
   port=`echo $HTTP_PROXY | cut -d':' -f 3`
 
-  echo " 
-	<proxy>
-      <id>proxy</id>
-      <active>true</active>
-      <protocol>http</protocol>
-      <host>$host</host>
-      <port>$port</port>
-      <nonProxyHosts>$NO_PROXY</nonProxyHosts>
-    </proxy>
-    "
+  proxy_config=`echo "<proxy> <id>proxy</id> <active>true</active> <protocol>http</protocol> <host>$host</host> <port>$port</port> <nonProxyHosts>$NO_PROXY</nonProxyHosts> </proxy>"`
+
+  cat $MVN_HOME/conf/settings.xml | sed -e "s|<proxies>|<proxies>${proxy_config}|g" > settings.xml
+
+  sudo cp -f $MVN_HOME/conf/settings.xml $MVN_HOME/conf/settings.xml.bak
+  sudo mv -f settings.xml $MVN_HOME/conf/
+
 fi
