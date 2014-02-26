@@ -26,6 +26,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "install_scripts/java.sh"
   config.vm.provision "shell", path: "install_scripts/maven.sh"
   config.vm.provision "shell", path: "install_scripts/git.sh"
+  config.vm.provision "shell", path: "install_scripts/apache.sh"
 
   config.vbguest.auto_update = false
 
