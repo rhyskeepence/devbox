@@ -21,11 +21,11 @@ Vagrant.configure("2") do |config|
     virtualbox.gui = false
   end
 
-  config.vm.provision "shell", path: "provision_oracle_conf.sh"
-  config.vm.provision "shell", path: "provision_env.sh"
-  config.vm.provision "shell", path: "provision_java.sh"
-  config.vm.provision "shell", path: "provision_maven.sh"
-  config.vm.provision "shell", path: "provision_git.sh"
+  config.vm.provision "shell", path: "install_scripts/provision_oracle_conf.sh"
+  config.vm.provision "shell", path: "install_scripts/provision_env.sh"
+  config.vm.provision "shell", path: "install_scripts/provision_java.sh"
+  config.vm.provision "shell", path: "install_scripts/provision_maven.sh"
+  config.vm.provision "shell", path: "install_scripts/provision_git.sh"
 
   config.vbguest.auto_update = false
 
